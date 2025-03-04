@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #fff;
+    display: inline-block;
+    background-image: linear-gradient(90deg, #0bd, #0bd 50%, #fff 50%, #fff);
+    background-size: 200% 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 20px;
+}
+
+button, #backButton, #saveButton {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    max-width: 200px; 
+}
+
+button {
+    margin: 0 auto;
+    opacity: 0;
+}
+
+button:hover, #backButton:hover {
+    background-color: #0088ee;
+}
+
+p#description {
+    text-decoration: underline;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+#inputFields > div {
+    margin-bottom: 15px;
+}
+
+#inputFields textarea {
+    width: 80%;
+    height: 80px;
+}
+
+.initial-hidden { 
+    opacity: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background: #dbf8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label {
+    font-weight: bold;
+    color: #333;
+}
+.input-field, .textarea-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.input-field {
+    font-size: 1.8em;
+}
+.textarea-field {
+    font-size: 1.4em;
+}
+.textarea-field {
+    height: 80px;
+    margin: auto;
+    resize: vertical;
+}
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}

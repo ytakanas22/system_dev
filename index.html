@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>システム開発ヘルパー</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <p id="description"></p>
+    <button id="button"></button>
+
+    <div id="inputFields" style="display: none;" class="container">
+        <div class="section">
+            <label for="projectName" style="font-size: 1.8em">プロジェクト名</label>
+            <input type="text" id="projectName" class="input-field">
+        </div>
+        <div class="section">
+            <label for="requirement" style="font-size: 1.6em">要件定義</label>
+        </div>
+        <div class="section">
+            <label for="functionalReq">機能要件</label>
+            <textarea id="functionalReq" class="textarea-field"></textarea>
+        </div>
+        <div class="section">
+            <label for="nonFunctionalReq">非機能要件</label>
+            <textarea id="nonFunctionalReq" class="textarea-field"></textarea>
+        </div>
+        <div class="section">
+            <label for="requirement" style="font-size: 1.6em">設計</label>
+        </div>
+        <div class="section">
+            <label for="externalDesign">外部設計</label>
+            <textarea id="externalDesign" class="textarea-field"></textarea>
+        </div>
+        <div class="section">
+            <label for="internalDesign">内部設計</label>
+            <textarea id="internalDesign" class="textarea-field"></textarea>
+        </div>
+        <div class="button-container">
+            <backButton id="backButton"></backButton>
+            <saveButton id="saveButton"></saveButton>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
