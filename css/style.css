@@ -14,7 +14,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-button, #backButton, #saveButton {
+button, #backButton, #saveButton ,#exportButton{
     background-color: #0099ff;
     color: white;
     border: none;
@@ -32,7 +32,7 @@ button {
     opacity: 0;
 }
 
-button:hover, #backButton:hover {
+button:hover, #backButton:hover, #saveButton:hover ,#exportButton:hover {
     background-color: #0088ee;
 }
 
@@ -58,12 +58,12 @@ p#description {
 
 .container {
     max-width: 800px;
+    overflow: auto;
     margin: auto;
     padding: 40px;
     background: #dbf8f8;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
     flex-direction: column;
     gap: 10px;
 }

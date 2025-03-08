@@ -10,6 +10,7 @@ class App {
             this.cacheElements();
             this.animateInitialState();
             this.addEventListeners();
+            this.exporter();
         });
     }
 
@@ -29,6 +30,7 @@ class App {
         this.inputFields = document.querySelector("#inputFields");
         this.backButton = document.querySelector("#backButton");
         this.saveButton = document.querySelector("#saveButton");
+        this.exportButton = document.querySelector("#exportButton");
     }
 
     animateInitialState() {
@@ -117,15 +119,35 @@ class App {
             localStorage.setItem("projectData", JSON.stringify(data));
             alert("データを保存しました。");
         });
+
+        this.exportButton.addEventListener("click", () => {
+            const element = document.querySelector(".container");
+        
+            html2pdf()
+                .set({
+                    margin: 10, // 余白調整
+                    filename: "project_data.pdf",
+                    image: { type: "jpeg", quality: 0.98 },
+                    html2canvas: { 
+                        scale: 3,  // 高解像度で出力
+                        scrollY: 0 // スクロール位置によるズレを防ぐ
+                    },
+                    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+                })
+                .from(element)
+                .save();
+        });
     }
+
 }
 
 const strings = {
-    heading: 'システム開発サポーター',
-    description: 'システム開発のサポートをするアプリです。',
-    button: '開始する',
-    backButton: '戻る',
-    saveButton: '保存する',
+    heading: "システム開発サポーター",
+    description: "システム開発のサポートをするアプリです。",
+    button: "開始する",
+    backButton: "戻る",
+    saveButton: "保存する",
+    exportButton: "PDF保存",
 };
 
 new App(strings);
